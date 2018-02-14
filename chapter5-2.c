@@ -20,17 +20,10 @@ int g_data[BUF_SIZE];   /* shared finite buffer  */
 int g_idx;              /* index to next available slot in buffer,
                            remember that globals are set to zero
                            according to C standard, so no init needed  */
-/*
-struct Number{
-  int ArgFromUser;
-};
-*/
+
 int main(int argc, char *argv[]) {
 	pthread_t pid, cid;
-/*  struct Number *targ;
-targ = (struct Number*) malloc(sizeof(struct Number));
-targ->ArgFromUser = strtol(argv[1], NULL, 10);
-*/
+
 int *i = malloc(sizeof(*i));
 *i =  strtol(argv[1], NULL, 10);
 	// Initialie the semaphores
